@@ -5,7 +5,7 @@ body {
 
 header {
     height: 90vh;
-    background-image: url(./slider-image/4ba00977-861e-4f1d-a14e-c8836ff32959.jpg);
+    background-image: url(./background-image/4ba00977-861e-4f1d-a14e-c8836ff32959.jpg);
     background-repeat: no-repeat;
     background-size: 100% auto;
 }
@@ -42,16 +42,18 @@ nav {
 
 
 .about {
-    margin: 130px 130px 70px 130px;
+    margin: 130px 560px 40px 560px;
     text-align: center;
-    color:white;
-    font-size: 2.5rem;
+    color: #282828;
+    font-size: 1.5rem;
+    border-radius: 40px;
+    background:cyan;
 }
 
-.container{
-    margin: 0px 130px ;
+.container {
+    margin: 0px 130px;
     display: grid;
-    grid-template-columns: repeat(2,1fr);
+    grid-template-columns: repeat(2, 1fr);
     gap: 20px;
 }
 
@@ -65,31 +67,174 @@ nav {
     height: 200px;
 }
 
-.card img{
+.card img {
     width: 40%;
     border-radius: 50%;
 }
 
-.card-description{
+.card-description {
     padding-top: 30px;
     padding-right: 30px;
 }
 
-.card-description h2{
+.card-description h2 {
     margin-bottom: 0px;
 }
 
-.card-description p{
+.card-description p {
     margin-top: 5px;
 }
 
-#ikbal{
-   padding-right: 100px;
+#ikbal {
+    padding-right: 100px;
 }
 
-#miad{
+#miad {
     margin-right: 60px;
 }
-#yeasir{
+
+#yeasir {
     margin-right: 35px;
+}
+
+.khulna-tour {
+    color: #282828;
+    font-size: 1.5rem;
+    text-align: center;
+    border-radius: 40px;
+    background:cyan;
+    margin: 120px 520px 20px 520px ;
+}
+
+
+.slider-container {
+    max-width: 85%;
+    margin: auto;
+    overflow: hidden;
+}
+
+.slider {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.slide {
+    min-width: 100%;
+}
+
+img {
+    width: 100%;
+    height: auto;
+}
+
+
+.khulna-tour-images-heading{
+    text-align: center;
+    margin: 100px 550px 30px 550px ;
+    color:#282828;
+    background-color: cyan;
+    border-radius: 40px;
+}
+
+.khulna-tour-images{
+    max-width: 85%;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    column-gap: 40px;
+    row-gap: 20px;
+}
+
+.khulna-tour-images img{
+    border: 10px solid cyan;
+    border-radius: 10px;
+}
+
+.see-more{
+    text-align: center;
+    margin-top: 50px;
+}
+
+.see-more h2{
+    display: inline;
+    margin-right: 20px;
+    background-color: cyan;
+    padding: 0px 10px;
+    border-radius: 50%;
+
+}
+
+.see-more h1{
+    display: inline;
+    margin-right: 30px;
+    color: cyan;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Responsive styling */
+@media screen and (min-width: 768px) {
+    img {
+        max-height: 400px;
+    }
+
+   
+
+}
+
+@media screen and (min-width: 1024px) {
+    img {
+        max-height: 600px;
+    }
+
 }

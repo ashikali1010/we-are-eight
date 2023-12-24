@@ -31,13 +31,10 @@
             </div>
         </nav>
 
-        <div class="slider">
-
-        </div>
     </header>
 
     <main>
-        <h1 class="about">About us</h1>
+        <div class="about"><h1>About us</h1></div>
 
         <div class="container">
 
@@ -133,6 +130,97 @@
            
 
 
+        </div>
+
+        <div class="khulna-tour">
+                   <h1>Khulna Tour</h1>
+        </div>
+
+
+        <div class="slider-container">
+            <div class="slider">
+                <div class="slide">
+                    <img src="../slider-image/1.jpeg" alt="Image 1">
+                </div>
+    
+                <div class="slide">
+                    <img src="../slider-image/3.jpeg" alt="Image 2">
+                </div>
+    
+                <div class="slide">
+                    <img src="../slider-image/4.jpeg" alt="Image 3">
+                </div>
+    
+                <div class="slide">
+                    <img src="../slider-image/5.jpeg" alt="Image 4">
+                </div>
+    
+                <div class="slide">
+                    <img src="../slider-image/6.jpeg" alt="Image 5">
+                </div>
+    
+                <div class="slide">
+                    <img src="../slider-image/8.jpeg" alt="Image 6">
+                </div>
+    
+                <div class="slide">
+                    <img src="../slider-image/9.jpg" alt="Image 7">
+                </div>
+    
+                <div class="slide">
+                    <img src="../slider-image/10.jpg" alt="Image 8">
+                </div>
+    
+                <div class="slide">
+                    <img src="../slider-image/11.jpg" alt="Image 9">
+                </div>
+    
+                <!-- Add more slides as needed -->
+            </div>
+        </div>
+    
+        <script>
+            // JavaScript for automatic sliding
+            let currentIndex = 0;
+            const slides = document.querySelectorAll('.slide');
+            const totalSlides = slides.length;
+    
+            function nextSlide() {
+                currentIndex = (currentIndex + 1) % totalSlides;
+                updateSlider();
+            }
+    
+            function updateSlider() {
+                const newPosition = -currentIndex * 100 + '%';
+                document.querySelector('.slider').style.transform = 'translateX(' + newPosition + ')';
+            }
+    
+            // Automatically change slide every 3 seconds (adjust as needed)
+            setInterval(nextSlide, 3000);
+        </script>
+
+
+
+        <div class="khulna-tour-images-heading">
+            <h1>Khulna Tour Images</h1>
+        </div>
+
+        <section class="khulna-tour-images">
+            <img src="all-photos/1.jpeg" alt="" class="images-container">
+            <img src="all-photos/6.jpeg" alt="" class="images-container">
+            <img src="all-photos/40.jpeg" alt="" class="images-container">
+            <img src="all-photos/27.jpeg" alt="" class="images-container">
+            <img src="all-photos/34.jpeg" alt="" class="images-container">
+            <img src="all-photos/14.jpeg" alt="" class="images-container">
+            <img src="all-photos/68.jpg" alt="" class="images-container">
+            <img src="all-photos/63.jpg" alt="" class="images-container">
+        </section>
+
+        <div class="see-more">
+            <h1>See More - Page</h1>
+            <h2>2</h2>
+            <h2>3</h2>
+            <h2>4</h2>
         </div>
     </main>
 
