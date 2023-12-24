@@ -170,6 +170,16 @@ img {
     color: cyan;
 }
 
+.see-more a{
+    text-decoration: none;
+}
+
+.see-more h2:hover{
+    background-color:blue;
+    color: white;
+    border-radius: 50%;
+}
+
 
 
 
