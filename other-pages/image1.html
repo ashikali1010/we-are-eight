@@ -1,120 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Responsive Image Slider</title>
-    <style>
-        body {
-            margin: 0;
-            font-family: Arial, sans-serif;
-            background-color: #282828;
-        }
-
-        .slider-container {
-            max-width: 85%;
-            margin: auto;
-            overflow: hidden;
-        }
-
-        .slider {
-            display: flex;
-            transition: transform 0.5s ease-in-out;
-        }
-
-        .slide {
-            min-width: 100%;
-        }
-
-        img {
-            width: 100%;
-            height: auto;
-        }
-
-        /* Responsive styling */
-        @media screen and (min-width: 768px) {
-            img {
-                max-height: 400px;
-            }
-
-           
-
-        }
-
-        @media screen and (min-width: 1024px) {
-            img {
-                max-height: 600px;
-            }
-
-        }
-    </style>
+    <title>Khulna Tour Images...</title>
 </head>
-
 <body>
-
-    <div class="slider-container">
-        <div class="slider">
-            <div class="slide">
-                <img src="../slider-image/1.jpeg" alt="Image 1">
-            </div>
-
-            <div class="slide">
-                <img src="../slider-image/3.jpeg" alt="Image 2">
-            </div>
-
-            <div class="slide">
-                <img src="../slider-image/4.jpeg" alt="Image 3">
-            </div>
-
-            <div class="slide">
-                <img src="../slider-image/5.jpeg" alt="Image 4">
-            </div>
-
-            <div class="slide">
-                <img src="../slider-image/6.jpeg" alt="Image 5">
-            </div>
-
-            <div class="slide">
-                <img src="../slider-image/8.jpeg" alt="Image 6">
-            </div>
-
-            <div class="slide">
-                <img src="../slider-image/9.jpg" alt="Image 7">
-            </div>
-
-            <div class="slide">
-                <img src="../slider-image/10.jpg" alt="Image 8">
-            </div>
-
-            <div class="slide">
-                <img src="../slider-image/11.jpg" alt="Image 9">
-            </div>
-
-            <!-- Add more slides as needed -->
-        </div>
-    </div>
-
-    <script>
-        // JavaScript for automatic sliding
-        let currentIndex = 0;
-        const slides = document.querySelectorAll('.slide');
-        const totalSlides = slides.length;
-
-        function nextSlide() {
-            currentIndex = (currentIndex + 1) % totalSlides;
-            updateSlider();
-        }
-
-        function updateSlider() {
-            const newPosition = -currentIndex * 100 + '%';
-            document.querySelector('.slider').style.transform = 'translateX(' + newPosition + ')';
-        }
-
-        // Automatically change slide every 3 seconds (adjust as needed)
-        setInterval(nextSlide, 3000);
-    </script>
-
+    <section class="khulna-tour-images">
+        <img src="all-photos/1.jpeg" alt="" class="images-container">
+        <img src="all-photos/6.jpeg" alt="" class="images-container">
+        <img src="all-photos/40.jpeg" alt="" class="images-container">
+        <img src="all-photos/27.jpeg" alt="" class="images-container">
+        <img src="all-photos/34.jpeg" alt="" class="images-container">
+        <img src="all-photos/14.jpeg" alt="" class="images-container">
+        <img src="all-photos/68.jpg" alt="" class="images-container">
+        <img src="all-photos/63.jpg" alt="" class="images-container">
+    </section>
 </body>
-
 </html>
