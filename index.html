@@ -31,10 +31,73 @@
             </div>
         </nav>
 
+
+
+        <div>
+            <div id="typewriterText">
+                <div id="line1"></div>
+                <div id="line2"></div>
+            </div>
+        </div>
+
+        <script>
+            document.addEventListener('DOMContentLoaded', function () {
+                const line1 = document.getElementById('line1');
+                const line2 = document.getElementById('line2');
+                const textToType1 = "Khulna Tour";
+                const textToType2 = "Mobarakganj Railway Station - Kaliganj";
+                let index = 0;
+
+                function typeLine1() {
+                    line1.textContent = textToType1.slice(0, index);
+                    index++;
+
+                    if (index <= textToType1.length) {
+                        setTimeout(typeLine1, 50); // Adjust typing speed as needed
+                    } else {
+                        // When the first line is complete, start typing the second line
+                        index = 0;
+                        setTimeout(typeLine2, 1000); // Adjust delay before starting the second line
+                    }
+                }
+
+                function typeLine2() {
+                    line2.textContent = textToType2.slice(0, index);
+                    index++;
+
+                    if (index <= textToType2.length) {
+                        setTimeout(typeLine2, 50); // Adjust typing speed as needed
+                    } else {
+                        setTimeout(eraseText, 2000); // Adjust delay before erasing
+                    }
+                }
+
+                function eraseText() {
+                    if (index >= 0) {
+                        line1.textContent = textToType1.slice(0, index);
+                        line2.textContent = textToType2.slice(0, index);
+                        index--;
+
+                        setTimeout(eraseText, 30); // Adjust erasing speed as needed
+                    } else {
+                        // Restart typing the first line
+                        index = 0;
+                        setTimeout(typeLine1, 1000); // Adjust delay before restarting typing
+                    }
+                }
+
+                // Start the typing animation with the first line
+                typeLine1();
+            });
+        </script>
+
+
     </header>
 
     <main>
-        <div class="about"><h1>About us</h1></div>
+        <div class="about">
+            <h1>About us</h1>
+        </div>
 
         <div class="container">
 
@@ -43,8 +106,8 @@
                 <img src="about-section-images/ashik.jpg" alt="">
                 <div class="card-description">
                     <h2 class="name">Md Ashikur Rahaman</h2>
-                    <p class="details"> Home district - Rajshahi  <br>
-                        <i class="fa-solid fa-phone"></i>  01743439382
+                    <p class="details"> Home district - Rajshahi <br>
+                        <i class="fa-solid fa-phone"></i> 01743439382
 
                     </p>
                 </div>
@@ -54,8 +117,8 @@
                 <img src="about-section-images/burhan.jpg" alt="">
                 <div class="card-description">
                     <h2 class="name">Burhan Joy </h2>
-                    <p class="details"> Home district - Hobiganj, Sylhet  <br>
-                        <i class="fa-solid fa-phone"></i>  01795952953
+                    <p class="details"> Home district - Hobiganj, Sylhet <br>
+                        <i class="fa-solid fa-phone"></i> 01795952953
 
                     </p>
                 </div>
@@ -65,8 +128,8 @@
                 <img src="about-section-images/hemayet.jpg" alt="">
                 <div class="card-description">
                     <h2 class="name">HB Hemayet Hossain </h2>
-                    <p class="details"> Home district - Faridpur, Dhaka  <br>
-                        <i class="fa-solid fa-phone"></i>  01760688361
+                    <p class="details"> Home district - Faridpur, Dhaka <br>
+                        <i class="fa-solid fa-phone"></i> 01760688361
 
                     </p>
                 </div>
@@ -76,8 +139,8 @@
                 <img src="about-section-images/miad.jpg" alt="">
                 <div class="card-description" id="miad">
                     <h2 class="name">Miyad Bhuiyan</h2>
-                    <p class="details"> Home district - Comilla  <br>
-                        <i class="fa-solid fa-phone"></i>  01902308728
+                    <p class="details"> Home district - Comilla <br>
+                        <i class="fa-solid fa-phone"></i> 01902308728
 
                     </p>
                 </div>
@@ -87,19 +150,19 @@
                 <img src="about-section-images/showon.jpeg" alt="">
                 <div class="card-description">
                     <h2 class="name">Hazrat Shaw Showon </h2>
-                    <p class="details"> Home district - Tangail  <br>
-                        <i class="fa-solid fa-phone"></i>  01703417455
+                    <p class="details"> Home district - Tangail <br>
+                        <i class="fa-solid fa-phone"></i> 01703417455
 
                     </p>
                 </div>
             </div>
 
-             <div class="card">
+            <div class="card">
                 <img src="about-section-images/zim.jpg" alt="">
                 <div class="card-description" id="yeasir">
                     <h2 class="name">Yeasir Arafat Zim </h2>
-                    <p class="details"> Home district - Tangail  <br>
-                        <i class="fa-solid fa-phone"></i>  01518381060
+                    <p class="details"> Home district - Tangail <br>
+                        <i class="fa-solid fa-phone"></i> 01518381060
 
                     </p>
                 </div>
@@ -109,8 +172,8 @@
                 <img src="about-section-images/ikbal.jpg" alt="">
                 <div class="card-description" id="ikbal">
                     <h2 class="name">Ikbal Mahmud </h2>
-                    <p class="details"> Home district - Dhaka  <br>
-                        <i class="fa-solid fa-phone"></i>  01862382389
+                    <p class="details"> Home district - Dhaka <br>
+                        <i class="fa-solid fa-phone"></i> 01862382389
 
                     </p>
                 </div>
@@ -120,20 +183,20 @@
                 <img src="about-section-images/noman.jpg" alt="">
                 <div class="card-description">
                     <h2 class="name">Abdullah Al Noman </h2>
-                    <p class="details"> Home district - Pabna  <br>
-                        <i class="fa-solid fa-phone"></i>  01799102356
+                    <p class="details"> Home district - Pabna <br>
+                        <i class="fa-solid fa-phone"></i> 01799102356
 
                     </p>
                 </div>
             </div>
 
-           
+
 
 
         </div>
 
         <div class="khulna-tour">
-                   <h1>Khulna Tour</h1>
+            <h1>Khulna Tour</h1>
         </div>
 
 
@@ -142,59 +205,59 @@
                 <div class="slide">
                     <img src="slider-image/1.jpeg" alt="Image 1">
                 </div>
-    
+
                 <div class="slide">
                     <img src="slider-image/3.jpeg" alt="Image 2">
                 </div>
-    
+
                 <div class="slide">
                     <img src="slider-image/4.jpeg" alt="Image 3">
                 </div>
-    
+
                 <div class="slide">
                     <img src="slider-image/5.jpeg" alt="Image 4">
                 </div>
-    
+
                 <div class="slide">
                     <img src="slider-image/6.jpeg" alt="Image 5">
                 </div>
-    
+
                 <div class="slide">
                     <img src="slider-image/8.jpeg" alt="Image 6">
                 </div>
-    
+
                 <div class="slide">
                     <img src="slider-image/9.jpg" alt="Image 7">
                 </div>
-    
+
                 <div class="slide">
                     <img src="slider-image/10.jpg" alt="Image 8">
                 </div>
-    
+
                 <div class="slide">
                     <img src="slider-image/11.jpg" alt="Image 9">
                 </div>
-    
+
                 <!-- Add more slides as needed -->
             </div>
         </div>
-    
+
         <script>
             // JavaScript for automatic sliding
             let currentIndex = 0;
             const slides = document.querySelectorAll('.slide');
             const totalSlides = slides.length;
-    
+
             function nextSlide() {
                 currentIndex = (currentIndex + 1) % totalSlides;
                 updateSlider();
             }
-    
+
             function updateSlider() {
                 const newPosition = -currentIndex * 100 + '%';
                 document.querySelector('.slider').style.transform = 'translateX(' + newPosition + ')';
             }
-    
+
             // Automatically change slide every 3 seconds (adjust as needed)
             setInterval(nextSlide, 2500);
         </script>
@@ -218,7 +281,9 @@
 
         <div class="see-more">
             <h1>See More - Page</h1>
-            <a href="other-pages/image1.html" target="blank"><h2>2</h2></a>
+            <a href="other-pages/image1.html" target="blank">
+                <h2>2</h2>
+            </a>
             <h2>3</h2>
             <h2>4</h2>
         </div>

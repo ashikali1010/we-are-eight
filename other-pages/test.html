@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Typewriter Effect</title>
+    <style>
+        #typewriterText {
+            overflow: hidden;
+            white-space: nowrap;
+            font-family: monospace;
+            display: inline-block;
+        }
+
+        #line1, #line2 {
+            display: block;
+        }
+    </style>
+</head>
+<body>
+
+<div>
+    <div id="typewriterText">
+        <div id="line1"></div>
+        <div id="line2"></div>
+    </div>
+</div>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const line1 = document.getElementById('line1');
+        const line2 = document.getElementById('line2');
+        const textToType1 = "The entire text will be written";
+        const textToType2 = "starting from one side and then off again";
+        let index = 0;
+
+        function typeLine1() {
+            line1.textContent = textToType1.slice(0, index);
+            index++;
+
+            if (index <= textToType1.length) {
+                setTimeout(typeLine1, 50); // Adjust typing speed as needed
+            } else {
+                // When the first line is complete, start typing the second line
+                index = 0;
+                setTimeout(typeLine2, 1000); // Adjust delay before starting the second line
+            }
+        }
+
+        function typeLine2() {
+            line2.textContent = textToType2.slice(0, index);
+            index++;
+
+            if (index <= textToType2.length) {
+                setTimeout(typeLine2, 50); // Adjust typing speed as needed
+            } else {
+                setTimeout(eraseText, 2000); // Adjust delay before erasing
+            }
+        }
+
+        function eraseText() {
+            if (index >= 0) {
+                line1.textContent = textToType1.slice(0, index);
+                line2.textContent = textToType2.slice(0, index);
+                index--;
+
+                setTimeout(eraseText, 30); // Adjust erasing speed as needed
+            } else {
+                // Restart typing the first line
+                index = 0;
+                setTimeout(typeLine1, 1000); // Adjust delay before restarting typing
+            }
+        }
+
+        // Start the typing animation with the first line
+        typeLine1();
+    });
+</script>
+
+</body>
+</html>

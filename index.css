@@ -20,6 +20,22 @@ nav {
     border-radius: 10px;
 }
 
+#typewriterText {
+    overflow: hidden;
+    white-space: nowrap;
+    display: inline-block;
+    font-size: 3rem;
+    margin: 150px 0px 0px 70px;
+    color: rgb(8, 0, 255);
+
+}
+
+#line1, #line2 {
+    display: block;
+}
+
+
+
 .Homeicon img {
     height: 82px;
     border-radius: 15%;
